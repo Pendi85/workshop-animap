@@ -4,9 +4,23 @@ import { createApp } from 'vue/dist/vue.esm-bundler.js'
 import Map from './components/map.vue'
 
 const app = createApp({
+    mounted() {
+        const currentURL = window.location.href;
+
+        const url = new URL(currentURL);
+        const animal_name = url.searchParams.get('animal');
+
+        if (animal_name != null) {
+            const animal_search = this.animals.find(animal => animal.name == animal_name);
+
+            if (animal_search)
+                animal_search.check = true;
+        }
+    },
     data() {
         return {
             showModal: false,
+            selectAll: false,
             message: 'Hello Vue!',
             animals: [
                 {
@@ -21,7 +35,7 @@ const app = createApp({
                 },
                 {
                     name: "Cerf éphale",
-                    color: 'red-700',
+                    color: 'red-500',
                     check: false
                 },
                 {
@@ -69,12 +83,24 @@ const app = createApp({
                     color: 'teal-400',
                     check: false
                 }
+            ],
+            cameras: [
+                { name: "Camera 1", photos: 100, image: '/images/cameras/camera1.jpg' },
+                { name: "Camera 2", photos: 600, image: '/images/cameras/camera2.jpg' }
             ]
         };
     },
     methods: {
         changeModalState() {
             this.showModal = !this.showModal;
+        },
+        selectAllAnimals() {
+            this.selectAll = !this.selectAll;
+
+            this.animals.forEach(animal => {
+                animal.check = this.selectAll;
+            });
+
         }
     },
 });

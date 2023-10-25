@@ -21,7 +21,7 @@
                             <div class="h-8 w-8 bg-primary rounded-full flex items-center justify-center">
                                 <img src="/images/animal.svg" alt="">
                             </div>
-                            <img src="/images/map.svg" alt="">
+                            <a href="/map?animal=Ecureil de corée"><img src="/images/map.svg" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                             <div class="h-8 w-8 bg-yellow-500 rounded-full flex items-center justify-center">
                                 <img src="/images/animal.svg" alt="">
                             </div>
-                            <img src="/images/map.svg" alt="">
+                            <a href="/map?animal=Belette"><img src="/images/map.svg" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                             <div class="h-8 w-8 bg-red-500 rounded-full flex items-center justify-center">
                                 <img src="/images/animal.svg" alt="">
                             </div>
-                            <img src="/images/map.svg" alt="">
+                            <a href="/map?animal=Cerf éphale"><img src="/images/map.svg" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                             <div class="h-8 w-8 bg-blue-700 rounded-full flex items-center justify-center">
                                 <img src="/images/animal.svg" alt="">
                             </div>
-                            <img src="/images/map.svg" alt="">
+                            <a href="/map?animal=Sanglier"><img src="/images/map.svg" alt=""></a>
                         </div>
                     </div>
                 </div>
