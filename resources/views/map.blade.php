@@ -9,10 +9,10 @@
         @include('include.navbar')
 
         <div class="w-full px-32 mt-12 flex flex-wrap">
-            <div class="w-1/3 bg-white h-64 p-4">
+            <div class="w-1/3 bg-white  drop-shadow-lg h-64 p-4">
 
             </div>
-            <div id="app">
+            <div id="app" class="ml-4">
 
             </div>
         </div>
