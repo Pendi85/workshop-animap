@@ -17,10 +17,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/species', function () {
-    return view('species');
-});
 
 Route::get('/map', function () {
     return view('map');
+});
+
+Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('/login', 'Auth\LoginController@login');
+
+Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::post('/register', 'Auth\RegisterController@register');
+
+Route::get('/species', function () {
+    return view('species');
 });

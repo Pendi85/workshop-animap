@@ -18,13 +18,14 @@
                 <span class="ml-4 text-normal font-montserrat hover:underline hover:cursor-pointer">Actualités</span>
                 <a href="/species"><span class="ml-4 text-normal font-montserrat hover:underline hover:cursor-pointer">Espèces </span></a>
                 <a href="/map"><span class="ml-4 text-normal font-montserrat hover:underline hover:cursor-pointer">Carte</span></a>
+                <a href="/species"><span class="ml-4 text-normal font-montserrat hover:underline hover:cursor-pointer">Carte</span></a>
                 <span class="ml-4 text-normal font-montserrat hover:underline hover:cursor-pointer">FAQ</span>
                 <span class="ml-4 text-normal font-montserrat hover:underline hover:cursor-pointer">Camera</span>
             </div>
             <div class="flex flex-row items-center">
                 <div class="flex space-x-2 ">
-                    <button class="rounded-full font-montserrat px-4 py-1 bg-primary text-white ml-4">Connexion</button>
-                    <button class="rounded-full font-montserrat px-4 py-1 bg-secondary text-white">Inscription</button>
+                    <button id="open-login-form" class="rounded-full font-montserrat px-4 py-1 bg-primary text-white ml-4">Connexion</button>
+                    <button id="open-registration-form" class="rounded-full font-montserrat px-4 py-1 bg-secondary text-white">Inscription</button>
                 </div>
                 <div class="rounded-full hidden bg-cover ml-6 border-4 hover:border-indigo-500/100  bg-center w-12 h-12 bg-avatar hover:cursor-pointer"  @mouseover="changeModalState">
 
@@ -47,5 +48,38 @@
         </div>
     </div>
 </div>
+
+<!-- Login Form -->
+<div id="login-form" style="display: none;">
+    @include('auth.login')
+  </div>
+
+  <!-- Registration Form -->
+  <div id="registration-form" style="display: none;">
+    @include('auth.register')
+  </div>
+
+  <script>
+      // Select your buttons
+      const openLoginFormButton = document.getElementById('open-login-form');
+      const openRegistrationFormButton = document.getElementById('open-registration-form');
+
+      // Select the login and registration forms
+      const loginForm = document.getElementById('login-form');
+      const registrationForm = document.getElementById('registration-form');
+
+      // Add click event listeners to your buttons
+      openLoginFormButton.addEventListener('click', () => {
+          loginForm.style.display = 'block';
+          registrationForm.style.display = 'none';
+      });
+
+      openRegistrationFormButton.addEventListener('click', () => {
+          registrationForm.style.display = 'block';
+          loginForm.style.display = 'none';
+      });
+  </script>
+
+
 </body>
 </html>
