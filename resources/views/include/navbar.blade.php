@@ -16,8 +16,8 @@
                     <span class="ml-4 text-xl font-montserrat italic font-bold hover:underline hover:cursor-pointer mb-1">Animap</span>
                 </div>
                 <span class="ml-4 text-normal font-montserrat hover:underline hover:cursor-pointer">Actualités</span>
-                <span class="ml-4 text-normal font-montserrat hover:underline hover:cursor-pointer">Espèces </span>
-                <a href="/species"><span class="ml-4 text-normal font-montserrat hover:underline hover:cursor-pointer">Carte</span></a>
+                <a href="/species"><span class="ml-4 text-normal font-montserrat hover:underline hover:cursor-pointer">Espèces </span></a>
+                <a href="/map"><span class="ml-4 text-normal font-montserrat hover:underline hover:cursor-pointer">Carte</span></a>
                 <span class="ml-4 text-normal font-montserrat hover:underline hover:cursor-pointer">FAQ</span>
                 <span class="ml-4 text-normal font-montserrat hover:underline hover:cursor-pointer">Camera</span>
             </div>
