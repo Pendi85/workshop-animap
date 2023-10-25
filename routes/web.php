@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('actually');
 });
 
 
@@ -22,12 +24,15 @@ Route::get('/map', function () {
     return view('map');
 });
 
-Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
-Route::post('/login', 'Auth\LoginController@login');
+Route::get('/login', 'Auth\LoginController@index');
 
-Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-Route::post('/register', 'Auth\RegisterController@register');
+Route::get('/register', 'Auth\RegisterController@index');
 
 Route::get('/species', function () {
     return view('species');
+});
+
+
+Route::get('/actually', function () {
+    return view('actually');
 });

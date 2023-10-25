@@ -13,19 +13,18 @@
             <div class="relative flex items-center">
                 <div class="flex flex-row items-center">
                     <img src="{{ asset('images/logo.png') }}" height="60" width="60" class="">
-                    <span class="ml-4 text-xl font-montserrat italic font-bold hover:underline hover:cursor-pointer mb-1">Animap</span>
+                    <span class="ml-4 text-xl font-montserrat italic font-bold hover:underline hover:cursor-pointer ">Animap</span>
                 </div>
-                <span class="ml-4 text-normal font-montserrat hover:underline hover:cursor-pointer">Actualités</span>
+                <a href="/actually"><span class="ml-4 text-normal font-montserrat hover:underline hover:cursor-pointer">Actualités</span></a>
                 <a href="/species"><span class="ml-4 text-normal font-montserrat hover:underline hover:cursor-pointer">Espèces </span></a>
                 <a href="/map"><span class="ml-4 text-normal font-montserrat hover:underline hover:cursor-pointer">Carte</span></a>
-                <a href="/species"><span class="ml-4 text-normal font-montserrat hover:underline hover:cursor-pointer">Carte</span></a>
                 <span class="ml-4 text-normal font-montserrat hover:underline hover:cursor-pointer">FAQ</span>
                 <span class="ml-4 text-normal font-montserrat hover:underline hover:cursor-pointer">Camera</span>
             </div>
             <div class="flex flex-row items-center">
                 <div class="flex space-x-2 ">
-                    <button id="open-login-form" class="rounded-full font-montserrat px-4 py-1 bg-primary text-white ml-4">Connexion</button>
-                    <button id="open-registration-form" class="rounded-full font-montserrat px-4 py-1 bg-secondary text-white">Inscription</button>
+                    <a href="/login"><button id="open-login-form" class="rounded-full font-montserrat px-4 py-1 bg-primary text-white ml-4">Connexion</button></a>
+                    <a href="/register"><button id="open-registration-form" class="rounded-full font-montserrat px-4 py-1 bg-secondary text-white">Inscription</button></a>
                 </div>
                 <div class="rounded-full hidden bg-cover ml-6 border-4 hover:border-indigo-500/100  bg-center w-12 h-12 bg-avatar hover:cursor-pointer"  @mouseover="changeModalState">
 
