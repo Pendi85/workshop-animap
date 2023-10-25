@@ -49,37 +49,5 @@
     </div>
 </div>
 
-<!-- Login Form -->
-<div id="login-form" style="display: none;">
-    @include('auth.login')
-  </div>
-
-  <!-- Registration Form -->
-  <div id="registration-form" style="display: none;">
-    @include('auth.register')
-  </div>
-
-  <script>
-      // Select your buttons
-      const openLoginFormButton = document.getElementById('open-login-form');
-      const openRegistrationFormButton = document.getElementById('open-registration-form');
-
-      // Select the login and registration forms
-      const loginForm = document.getElementById('login-form');
-      const registrationForm = document.getElementById('registration-form');
-
-      // Add click event listeners to your buttons
-      openLoginFormButton.addEventListener('click', () => {
-          loginForm.style.display = 'block';
-          registrationForm.style.display = 'none';
-      });
-
-      openRegistrationFormButton.addEventListener('click', () => {
-          registrationForm.style.display = 'block';
-          loginForm.style.display = 'none';
-      });
-  </script>
-
-
 </body>
 </html>
