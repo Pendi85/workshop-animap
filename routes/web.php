@@ -22,3 +22,7 @@ Route::post('/login', 'Auth\LoginController@login');
 
 Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('/register', 'Auth\RegisterController@register');
+
+Route::get('/species', function () {
+    return view('species');
+});
