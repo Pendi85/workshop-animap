@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Controller\AnimalDetectorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/testIdentifyAnimal', function() {
+    return view('identifyAnimal');
+});
+
+Route::get('/identifyAnimal', 'AnimalDetectorController@index');
 
 Route::get('/map', function () {
     return view('map');
