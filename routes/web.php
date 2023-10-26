@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller\AnimalDetectorController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +17,7 @@ use App\Http\Controllers\Controller\AnimalDetectorController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('actually');
 });
 
 Route::get('/testIdentifyAnimal', function() {
@@ -28,12 +30,23 @@ Route::get('/map', function () {
     return view('map');
 });
 
-Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::get('/login', 'Auth\LoginController@index');
 Route::post('/login', 'Auth\LoginController@login');
 
-Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::get('/logout', 'Auth\LoginController@logout');
+
+Route::get('/register', 'Auth\RegisterController@index');
 Route::post('/register', 'Auth\RegisterController@register');
 
 Route::get('/species', function () {
     return view('species');
+});
+
+
+Route::get('/actually', function () {
+    return view('actually');
+});
+
+Route::get('/faq', function () {
+    return view('FAQ');
 });
