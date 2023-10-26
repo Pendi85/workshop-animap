@@ -18,7 +18,7 @@
                 <a href="/species"><span class="ml-4 text-normal font-montserrat hover:underline hover:cursor-pointer">Espèces </span></a>
                 <a href="/map"><span class="ml-4 text-normal font-montserrat hover:underline hover:cursor-pointer">Carte</span></a>
                 <a href="/faq"><span class="ml-4 text-normal font-montserrat hover:underline hover:cursor-pointer">FAQ</span></a>
-                <span class="ml-4 text-normal font-montserrat hover:underline hover:cursor-pointer">Camera</span>
+                <a href="/camera"><span class="ml-4 text-normal font-montserrat hover:underline hover:cursor-pointer">Camera</span></a>
             </div>
             <div class="flex flex-row items-center">
                 @guest

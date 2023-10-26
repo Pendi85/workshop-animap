@@ -24,7 +24,9 @@ Route::get('/testIdentifyAnimal', function() {
     return view('identifyAnimal');
 });
 
-Route::get('/identifyAnimal', 'AnimalDetectorController@index');
+Route::get('/identifyAnimal', 'AnimalDetectorController@create');
+Route::get('/camera', 'AnimalDetectorController@index');
+Route::post('/camera/add', 'AnimalDetectorController@store');
 
 Route::get('/map', function () {
     return view('map');

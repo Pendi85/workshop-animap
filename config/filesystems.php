@@ -30,6 +30,14 @@ return [
 
     'disks' => [
 
+        'google' => [
+            'driver' => 'google',
+            'clientId' => '166443416738-rslp448hf604v8se0tnb39idkrfbt9b6.apps.googleusercontent.com',
+            'clientSecret' => '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',
+            'refreshToken' => '1//04hWOJhKamJ8oCgYIARAAGAQSNwF-L9Irv8B5kpmmP1Io3iBky4ZBPEn9ZKpcUjdRsKnZm7PgoKbKM5vbKh1-7vjUBxCHs4efmGk',
+            'folderId' => '17jggQuJt9U7QrKSwdPJCq8c-JSmIYXKj',
+        ],
+
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),

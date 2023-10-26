@@ -19,7 +19,6 @@ class AnimalDetector extends Model
     private function init() {
         $this->probability = 0.0;
         $this->animal = "";
-        $this->message = "";
         $this->url = "";
     }
 
@@ -28,6 +27,7 @@ class AnimalDetector extends Model
 
         $client = new Client(['verify' => false]);
 
+        $this->url = $url;
         $response = $client->request('POST', 'https://general-classification1.p.rapidapi.com/v1/results?algo=algo1', [
             'multipart' => [
                 [
@@ -58,7 +58,8 @@ class AnimalDetector extends Model
             $this->animal = array_keys($classes)[0];
             $this->probability = $classes[$this->animal];
         }
-        else
-            $this->message = $data["status"]["message"];
+        else {
+            // changer plus tard
+        }
     }
 }
