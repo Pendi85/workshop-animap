@@ -1,6 +1,6 @@
 <template>
     <div v-if="load" style="height: 600px; width: 800px">
-        <l-map ref="map" v-model:zoom="zoom" :center="[48.847759, 2.4394969]">
+        <l-map :use-global-leaflet="false" ref="map" v-model:zoom="zoom" :center="[48.847759, 2.4394969]">
             <l-tile-layer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" layer-type="base"
                 name="OpenStreetMap"></l-tile-layer>
 
