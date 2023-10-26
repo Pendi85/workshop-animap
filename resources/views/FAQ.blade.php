@@ -11,7 +11,10 @@
 
 <div class="container mx-auto p-4">
     <article class="bg-white p-4 shadow-lg">
-        <h1 class="bold">Foire aux questions</h1>
+        <div class="flex items-center">
+            <img src="/images/faq.svg" alt="Image 2" class="w-8 h-8 rounded-full">
+            <h1 class="font-bold ml-2">Foire aux questions</h1>
+        </div>
         <div class="md:flex">
             <div class="w-full md:w-1/2 p-2 flex items-center">
                 <div class="pl-4">
