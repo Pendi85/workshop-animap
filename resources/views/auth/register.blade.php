@@ -13,7 +13,7 @@
                 <div class="w-full max-w-md">
                     <div class="bg-white p-8 rounded-lg shadow-lg">
                         <h1 class="text-2xl font-semibold mb-4">{{ __('Inscription') }}</h1>
-                        <form method="POST" action="">
+                        <form method="POST" action="/register">
                             @csrf
         
                             <div class="mb-4">
@@ -23,18 +23,6 @@
                                     type="text"
                                     name="name"
                                     value="{{ old('name') }}"
-                                    required
-                                    class="form-input w-full"
-                                />
-                            </div>
-        
-                            <div class="mb-4">
-                                <label for="prenom" class="block text-gray-600 text-sm font-medium">Prénom</label>
-                                <input
-                                    id="prenom"
-                                    type="text"
-                                    name="prenom"
-                                    value="{{ old('prenom') }}"
                                     required
                                     class="form-input w-full"
                                 />
