@@ -36,3 +36,7 @@ Route::get('/species', function () {
 Route::get('/actually', function () {
     return view('actually');
 });
+
+Route::get('/faq', function () {
+    return view('FAQ');
+});
