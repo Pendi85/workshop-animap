@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\AnimalDetector;
 use Illuminate\Http\Request;
+use Yaza\LaravelGoogleDriveStorage\Gdrive;
+
+use Illuminate\Support\Facades\Storage;
 
 class AnimalDetectorController extends Controller
 {   
@@ -13,6 +16,16 @@ class AnimalDetectorController extends Controller
      */
     public function index()
     {
+        $animals = AnimalDetector::all();
+
+        return view("images", ['animals' => $animals]);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
         $detector = new AnimalDetector();
         $detector->identify('https://drive.google.com/u/0/uc?id=1h67h9QfeHMgvhrPJ7EK_YsCZMm0sUg2P&export=download');
         $detector->save();
@@ -21,50 +34,15 @@ class AnimalDetectorController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(AnimalDetector $detector)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(AnimalDetector $detector)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, AnimalDetector $detector)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(AnimalDetector $detector)
-    {
-        //
+        $detector = new AnimalDetector();
+        $detector->probability = 0.9;
+        $detector->animal = "Ecureuil";
+        $detector->url = "https://drive.google.com/u/0/uc?id=10H2SbYaLchaxltiYNRvClC_LcrJjFRmV&export=download​";
+        $detector->save();
+        return redirect()->to('/camera');
     }
 }
