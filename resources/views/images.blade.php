@@ -9,7 +9,7 @@
         @include('include.navbar')
 
         <div class="w-full px-32 mt-4">
-            <form method="POST" action="/camera/add"  enctype="multipart/form-data">
+            <form method="POST" class="ml-52" action="/camera/add"  enctype="multipart/form-data">
                 @csrf
                 <input type="file" name="image" accept="image/*">
                 <button type="submit">Ajouter une image</button>

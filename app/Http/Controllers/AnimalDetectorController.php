@@ -38,15 +38,11 @@ class AnimalDetectorController extends Controller
      */
     public function store(Request $request)
     {
-        if ($request->hasFile('image') && $request->file('image')->isValid()) {
-            $image = $request->file('image');
-    
-            // Stockez l'image sur Google Drive en utilisant le package yaza/laravel-google-drive-storage
-            Gdrive::put('images/' . $image->getClientOriginalName(), $image);
-    
-            return "Image téléchargée avec succès sur Google Drive.";
-        }
-    
-        return "Échec du téléchargement de l'image.";
+        $detector = new AnimalDetector();
+        $detector->probability = 0.9;
+        $detector->animal = "Ecureuil";
+        $detector->url = "https://drive.google.com/u/0/uc?id=10H2SbYaLchaxltiYNRvClC_LcrJjFRmV&export=download​";
+        $detector->save();
+        return redirect()->to('/camera');
     }
 }
